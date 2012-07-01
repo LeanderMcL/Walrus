@@ -1,10 +1,9 @@
-<h1>Tasks for insertnamehere</h1>
+<h1>Tasks for {{user.username}}</h1>
 
-<ol>
-    <li>A task here <u>done</u> <u>edit</u></li>
-    <li>Another task here <u>done</u> <u>edit</u></li>
-    <li>Yet another task here <u>done</u> <u>edit</u></li>
-    <li>Etc <u>done</u> <u>edit</u></li>
-</ol>
+<ul>
+    {% for t in tasks %}
+    <li>{{t.tname}}</i>
+    {% endfor %}
+</ul>
 
 <p><a href="/newtask">New task</a> Main page Profile</p>

@@ -232,12 +232,7 @@ class TaskManagerPage(Handler):
         user = self.valid_user()
         if user:
             tasks = db.GqlQuery("SELECT * FROM Task WHERE userid = %s" % user.key().id())
-            self.write("<h1>Walrus Task Manager</h1>")
-            self.write("<p>%s, these are your active tasks:</p>" % user.username)
-            for t in tasks:
-                self.write("%s <br>" % t.tname)
-            self.write("<a href='/newtask'>Add a new task</a>")
-            self.render("tasklist.html")
+            self.render("tasklist.html", tasks = tasks, user = user)
         else:
             self.redirect('/')
             
