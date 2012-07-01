@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Walrus New Task</title>
+        <script type="text/javascript" src="../static/datepicker.js"></script>
+    </head>
+    
+    <body>
+        <h1>New Task</h1>
+        
+        <form method="post">
+            <label>Task name:</label><input type="text" name="tname"><br>
+            <label>Describe the task:</label><textarea name="tdesc"></textarea><br>
+            <label>Deadline:</label><input name="deadline"> 
+<input type=button value="select" onclick="displayDatePicker('deadline');"><br>
+            <label>Importance:</label>
+            <select name="importance">
+                <option value="3">Very important</option>
+                <option value="2" selected>Quite important</option>
+                <option value="1">Not very important</option>
+                </select><br>
+            <label>Bucket:</label>
+            <select name="parent">
+                <option value="none">None</option>
+            </select>
+            <br>
+            <input type="submit" value="Add Task">
+        </form>
+    </body>
+
+</html>

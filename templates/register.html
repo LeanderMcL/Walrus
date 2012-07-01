@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Register</title>
+</head>
+
+<body>
+</body>
+    <form method="post">
+        <label>Username: </label><input type="text" name="username" value={{populate.username}}><span style="color:red;">{{populate.name_error}} {{populate.dupe_name_error}}</span><br />
+        <label>Password: </label><input type="password" name="password"><span style="color:red;">{{populate.pass_error}}</span><br />
+        <label>Verify password: </label><input type="password" name="verify"><span style="color:red;">{{populate.verify_error}}</span><br />
+        <label>Email address: </label><input type="text" name="email" value={{populate.email}}><span style="color:red;">{{populate.email_error}}</span><br />
+        <input type="submit" value="Register!">
+    </form>
+
+</html>
